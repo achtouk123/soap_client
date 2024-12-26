@@ -25,34 +25,34 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getProductResponse", propOrder = {
-        "productReturn"
+        "product"
 })
 public class GetProductResponse {
 
     @XmlElement(name = "return")
-    protected Product productReturn;
+    protected Product product;
 
     /**
-     * Obtient la valeur de la propriété productReturn.
+     * Obtient la valeur de la propriété product.
      *
      * @return
      *     possible object is
      *     {@link Product }
      *
      */
-    public Product getProductReturn() {
-        return productReturn;
+    public Product getProduct() {
+        return product;
     }
 
     /**
-     * Définit la valeur de la propriété productReturn.
+     * Définit la valeur de la propriété product.
      *
      * @param value
      *     allowed object is
      *     {@link Product }
      *
      */
-    public void setProductReturn(Product value) {
-        this.productReturn = value;
+    public void setProduct(Product value) {
+        this.product = value;
     }
 }
