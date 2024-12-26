@@ -5,20 +5,25 @@ import proxy.ProductWS;
 import proxy.ProductWebService;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class ClientWS {
+    private static final Logger logger = Logger.getLogger(ClientWS.class.getName());
+
     public static void main(String[] args) {
         ProductWebService proxy = new ProductWS().getProductWebServicePort();
-        System.out.println(proxy.sellingPrice(400.00));
-        System.out.println("--------------");
+        logger.info("Selling price: " + proxy.sellingPrice(400.00));
+        logger.info("--------------");
+
         Product product = proxy.getProduct(4);
-        System.out.println(product.getName());
-        System.out.println(product.getPrice());
-        System.out.println("--------------");
+        logger.info("Product Name: " + product.getName());
+        logger.info("Product Price: " + product.getPrice());
+        logger.info("--------------");
+
         List<Product> products = proxy.productList();
         products.forEach(p -> {
-            System.out.println(p.getName());
-            System.out.println(p.getPrice());
+            logger.info("Product Name: " + p.getName());
+            logger.info("Product Price: " + p.getPrice());
         });
     }
 }
