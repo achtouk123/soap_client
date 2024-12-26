@@ -4,7 +4,6 @@ import proxy.Product;
 import proxy.ProductWS;
 import proxy.ProductWebService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClientWS {
